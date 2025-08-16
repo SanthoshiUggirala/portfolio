@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+.profile-img {
+    background-image: url('picture.jpg');
+    background-size: cover; /* Show the full image */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.profile-img:hover {
+    transform: scale(1.03);
+}
+.skill-badge {
+    transition: all 0.3s ease;
+}
+.skill-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.project-card {
+    transition: all 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3b82f6;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.active::after {
+    width: 100%;
+}
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
